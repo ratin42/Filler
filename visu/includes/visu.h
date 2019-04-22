@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   visu.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ratin <ratin@student.42.fr>                +#+  +:+       +#+        */
+/*   By: Raphael <Raphael@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 15:40:21 by ratin             #+#    #+#             */
-/*   Updated: 2019/04/19 16:32:01 by ratin            ###   ########.fr       */
+/*   Updated: 2019/04/21 20:41:39 by Raphael          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,67 +38,40 @@ typedef struct	s_mlx
 	t_img	img;
 }				t_mlx;
 
-typedef	struct	s_pion
+typedef	struct	s_player
 {
-	int			x;
-	int			y;
-	int			coef;
-}				t_pion;
+	int			number;
+	char		color;
+	int			nbr_pion;
+	char		*name;
+}				t_player;
+
+typedef	struct	s_map
+{
+	char		**image;
+	int			width;
+	int			height;
+}				t_map;
 
 typedef	struct	s_piece
 {
-	int			x;
-	int			y;
-	char		axe;
-	char		**piece;
-	int			i;
-	int			piece_free;
-	int			contact;
-	t_pion		first_pion;
-	t_pion		*all_piece;
+	char		**image;
+	int			width;
+	int			height;
 }				t_piece;
 
-typedef	struct	s_territory
+typedef struct	s_game
 {
-	int			nbr_of_pion;
-	char		color;
-	t_pion		*territory;
-}				t_territory;
-
-typedef	struct	s_closest
-{
-	int			coef;
-	t_pion		my;
-	t_pion		en;
-}				t_closest;
-
-typedef	struct	s_filler
-{
-	int			fd;
-	char		**map;
-	int			player;
-	int			map_free;
-	int			map_width;
-	int			map_height;
-	int			fin;
-	int			gotop;
 	int			turn;
-	char		pion;
-	t_territory	my_territory;
-	t_territory	en_territory;
-	t_piece		piece;
-	t_closest	closest;
-}				t_filler;
+	t_player	p1;
+	t_player	p2;
+	t_map		*map;
+}				t_game;
 
-typedef struct	s_point
-{
-	int			x;
-	int			y;
-}				t_point;
 
 int			init_mlx(t_mlx *mlx);
-int			get_game(t_filler *filler);
+int			parse_game(t_game *game);
 int			quit_fdf(void *mlx);
-int			draw(void *mlx, t_filler *filler);
+int			draw(void *mlx, t_game *game);
 
 #endif

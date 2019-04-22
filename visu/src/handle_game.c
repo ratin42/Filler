@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   handle_game.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Raphael <Raphael@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/19 15:48:23 by ratin             #+#    #+#             */
-/*   Updated: 2019/04/21 20:06:25 by Raphael          ###   ########.fr       */
+/*   Created: 2019/04/21 20:07:35 by Raphael           #+#    #+#             */
+/*   Updated: 2019/04/21 20:42:28 by Raphael          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/visu.h"
 
-int				main(void)
+char    *get_player_name(t_game *game, int player)
 {
-	t_mlx		mlx;
-	t_game		*game;
 
-	if (!(parse_game(&game)))
-		return (0);
-	if (!(init_mlx(&mlx)))
-		return (0);
-	mlx_hook(mlx.win_ptr, DestroyNotify, PointerMotionMask, quit_fdf, (void *)&mlx);
-	//mlx_loop_hook(mlx.mlx_ptr, draw, &mlx);
-	mlx_loop(mlx.mlx_ptr);
-	(void)filler;
-	return (0);
+}
+
+int     init_game(t_game *game)
+{
+    game->turn = 0;
+    game->p1.name = get_player_name(game, 1);
+    return (1);
 }

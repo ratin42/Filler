@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ratin <ratin@student.42.fr>                +#+  +:+       +#+         #
+#    By: Raphael <Raphael@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 18:46:26 by ratin             #+#    #+#              #
-#    Updated: 2019/04/19 16:26:18 by ratin            ###   ########.fr        #
+#    Updated: 2019/04/21 19:07:10 by Raphael          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,12 +31,14 @@ SRC := $(addprefix $(SRC_PATH)/,$(SRC_NAME))
 OBJ := $(addprefix $(OBJ_PATH)/,$(SRC_NAME:.c=.o))
 
 INCS := -I $(LIB_PATH)/$(INC_DIR) -I $(INC_DIR)
-INC := -I /usr/local/include
+INC := -I /Users/Raphael/Desktop/minilibx_macos
+#INC := -I /usr/local/include
 X := -I /System/Library/Frameworks/Tk.framework/Versions/8.5/Headers/X11/
 
 CC := gcc
 CFLAGS := -Wall -Wextra -Werror	-g
-MLX := -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit
+#MLX := -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit
+MLX := -L /Users/Raphael/Desktop/minilibx_macos/ -lmlx -framework OpenGL -framework AppKit
 
 all: obj $(NAME)
 
