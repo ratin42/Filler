@@ -1,9 +1,13 @@
 # Filler
-Create your player program to compete against other students on the
-famous (or not) Filler board. The principle is simple: two players take on each other on
-a board, and take turns placing the piece that the master of the game (supplied in the
-form of a Ruby executable) gives them, earning points. The game stops as soon as a
-piece can no longer be placed. Little playful project!
+Filler is a game, where two players / algorithm are fighting on a map.
+
+A virtual machine organizes the game :
+
+calls the players alternatively
+give each a random piece
+On each turn, the current player have to put his piece on the map, and try to bother the ennemy. To put a piece, the player have to write its coordinates in the "Y X\n" format on the standard input (stdin).
+The aim of the game is to put more pieces on the map than the ennemy.
+
 # Preview
 ![Alt text](https://image.noelshack.com/fichiers/2019/38/2/1568738010-screen-shot-2019-09-17-at-6-33-08-pm.png)
 ![](https://media.giphy.com/media/YqVy2qufgwDwTiwfzo/giphy.gif)
