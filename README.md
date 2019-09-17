@@ -10,4 +10,8 @@ The aim of the game is to put more pieces on the map than the ennemy.
 
 # Preview
 ![Alt text](https://image.noelshack.com/fichiers/2019/38/2/1568738010-screen-shot-2019-09-17-at-6-33-08-pm.png)
+
+![](https://media.giphy.com/media/ZedRTnmBXS4Mb2NPJV/giphy.gif)
+
+*Graphic interface*
 ![](https://media.giphy.com/media/YqVy2qufgwDwTiwfzo/giphy.gif)
