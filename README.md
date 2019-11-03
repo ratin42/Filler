@@ -1,7 +1,7 @@
 # Filler
 Filler is a game, where two players / algorithm are fighting on a map.
 
-A virtual machine organizes the game :
+A virtual machine organizes the game:
 
 calls the players alternatively
 give each a random piece
